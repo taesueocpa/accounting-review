@@ -1,0 +1,47 @@
+{
+  "name": "accounting-review",
+  "version": "0.1.0",
+  "description": "회계검토 스킬 — mykifrs(K-IFRS·일반기업회계기준 본문 + 질의회신 3,669건)와 myfss(금감원·금융위 감독자료)로 근거를 조회해 회계이슈를 판단하고 검토의견서를 작성한다. 계약서가 있으면 조항 번호로, 없으면 설명한 사실관계로 검토한다. scan(쟁점 지도) / memo(5단계 파이프라인) 모드.",
+  "author": {
+    "name": "eocpa.kr",
+    "email": "contact@eocpa.kr",
+    "url": "https://github.com/taesueocpa"
+  },
+  "homepage": "https://eocpa.kr",
+  "license": "MIT",
+  "keywords": [
+    "k-ifrs",
+    "회계기준",
+    "계약검토",
+    "회계이슈",
+    "수익인식",
+    "리스",
+    "충당부채",
+    "accounting",
+    "contract-review",
+    "accounting-review",
+    "finance-ai",
+    "mcp"
+  ],
+  "mcpServers": {
+    "mykifrs": {
+      "type": "http",
+      "url": "https://mykifrs.eocpa.kr/mcp",
+      "headers": { "x-eocpa-token": "${user_config.token}" }
+    },
+    "myfss": {
+      "type": "http",
+      "url": "https://myfss.eocpa.kr/mcp",
+      "headers": { "x-eocpa-token": "${user_config.token}" }
+    }
+  },
+  "userConfig": {
+    "token": {
+      "type": "string",
+      "title": "eocpa token (필수)",
+      "description": "https://eocpa.kr/token 에서 발급. MyDART·MyKIFRS·MyFSS 공용 토큰 하나로 두 서버가 함께 열립니다. 도구 호출에 필수이며(없으면 401), 목록 조회만 자격 없이 됩니다.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

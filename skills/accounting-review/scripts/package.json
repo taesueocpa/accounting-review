@@ -1,0 +1,14 @@
+{
+  "name": "accounting-review-scripts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "계약서 변환·인용 검증 스크립트. kordoc 은 hwp·hwpx·pdf 변환에만 필요하다(없어도 인용 검증은 동작한다).",
+  "scripts": {
+    "verify": "node verify-citations.mjs",
+    "convert": "node to-markdown.mjs"
+  },
+  "optionalDependencies": {
+    "kordoc": "^3.16.0"
+  }
+}

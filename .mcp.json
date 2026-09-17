@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "mykifrs": {
+      "type": "http",
+      "url": "https://mykifrs.eocpa.kr/mcp"
+    },
+    "myfss": {
+      "type": "http",
+      "url": "https://myfss.eocpa.kr/mcp"
+    }
+  }
+}

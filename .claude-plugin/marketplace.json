@@ -1,0 +1,13 @@
+{
+  "name": "accounting-review",
+  "owner": { "name": "taesueocpa" },
+  "description": "회계검토 스킬 — K-IFRS 기준서·질의회신·감독자료 실시간 조회 기반 회계이슈 검토의견서 작성 (계약서·거래 상황 양쪽)",
+  "plugins": [
+    {
+      "name": "accounting-review",
+      "source": "./",
+      "description": "계약서 또는 거래 상황을 K-IFRS·일반기업회계기준에 대입해 회계이슈를 식별하고 근거 기반 검토의견서를 작성한다 (scan/memo 모드, 계약서·사례 경로)",
+      "version": "0.1.0"
+    }
+  ]
+}
